@@ -1,0 +1,10 @@
+<div class="container-box">
+  <div class="city-box" [class]="city.bgColor"  >
+    <div class="city-box-info">
+      <p class="city-box-temp">{{city.temp|temp}}°</p>
+      <p class="city-box-name">{{city.name}}</p>
+    </div>
+
+    <img [src]="city.icon | icon3d" alt="" class="city-box-icon" />
+  </div>
+</div>

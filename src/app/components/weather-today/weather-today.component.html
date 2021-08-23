@@ -1,0 +1,9 @@
+<div class="weather-hours">
+    <p class="weather-hours-text">Today</p>
+    <div class="carousel">
+      <div class="weather-hours-lists" (swipe)="onSwipe($event)">
+        <app-weather-hour *ngFor="let hour of hours" [hour]="hour"></app-weather-hour>
+        
+      </div>
+    </div>
+  </div>

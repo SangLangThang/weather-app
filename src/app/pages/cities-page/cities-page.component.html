@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="cities" [class.addCity]="isAddCity">
+    <div class="cities__search">
+      <label class="cities__search-label"> Find Location </label>
+      <div type="text" class="cities__search-input">
+        <input type="text" placeholder="Search for your location..." [(ngModel)]="searchCity"
+        />
+        <i class="bx bx-search"></i>
+      </div>
+    </div>
+    <div class="cities__lists">
+      <app-city-box *ngFor="let city of cities |filterSearch:searchCity" [city]="city"></app-city-box>
+    </div>
+
+    <div class="cities__action">
+      <div class="action-search">
+        <label class="action-label"> Add City </label>
+        <p class="action-error" *ngIf="errorMessage.length>0">{{errorMessage}}</p>
+        <div type="text" class="action-input">
+          <input
+            type="text"
+            placeholder="Input location..."
+            class="form-control"
+            [formControl]="addCityControl"
+            
+          />
+          
+          <i class="bx bx-plus"></i>
+        </div>
+      </div>
+      <div class="action-btn">
+        <button
+          class="action-btn-add"
+          [disabled]="submitted"
+          (click)="addCity()"
+        >
+          <div class="action-btn-icon">
+            <i class="bx bx-plus"></i>
+          </div>
+          <span class="action-btn-text">Add City</span>
+        </button>
+        <button class="action-btn-cancel" (click)="handleCancel()">
+          <div class="action-btn-icon">
+            <i class="bx bx-x"></i>
+          </div>
+          <span class="action-btn-text">Cancel</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
