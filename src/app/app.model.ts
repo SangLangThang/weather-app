@@ -1,17 +1,15 @@
-
 export interface CityBoxData {
-  id:number;
+  id: number;
   name: string;
-  temp:number;
+  temp: number;
   lat: number;
   lon: number;
   time: number;
   icon: string;
-  bgColor:string;
+  bgColor: string;
 }
 export interface WeatherHour {
-  current:boolean;
   time: number;
-  temp:number;
+  temp: number;
   icon: string;
 }

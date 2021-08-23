@@ -1,59 +1,36 @@
 import { WeatherHour } from './../../app.model';
-import { Component, OnInit } from '@angular/core';
-import { ic_sun } from 'src/app/app.contants';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CityService } from 'src/app/services/city.service';
 @Component({
   selector: 'app-weather-today',
   templateUrl: './weather-today.component.html',
   styleUrls: ['./weather-today.component.scss'],
 })
 export class WeatherTodayComponent implements OnInit {
-  constructor() {}
-  hours: WeatherHour[] = [
-    {
-      current: false,
-      time: 17,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 18,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 19,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 188,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 1777,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 122347,
-      temp: 17,
-      icon: ic_sun,
-    },
-    {
-      current: false,
-      time: 1234327,
-      temp: 17,
-      icon: ic_sun,
-    },
-  ];
-  ngOnInit(): void {}
-  onSwipe(evt: any) {
-    console.log(evt);
+  @ViewChild('test') test!: ElementRef<HTMLDivElement>;
+  constructor( private cityService:CityService) {}
+  
+  
+
+  hours: WeatherHour[] = [];
+  step = 88;
+  position = 0;
+
+  onSwipe(ev: any) {
+    let carousel = document.querySelector('.weather-hours-lists');
+    if (ev.type === 'swipeleft' /* && this.position > -264 */ ) {
+      this.position -= this.step;
+      this.test.nativeElement.style.left = `${this.position}px`;
+    }
+    if (ev.type === 'swiperight' && this.position < 0) {
+      this.position += this.step;
+      this.test.nativeElement.style.left = `${this.position}px`;
+    }
+  }
+  ngOnInit(): void {
+    this.hours=this.cityService.getData()
+  }
+  ngAfterViewInit() {
+    
   }
 }

@@ -68,12 +68,6 @@ export class Icon3dPipe implements PipeTransform {
       case '13n':
         result = snow;
         break;
-      case '13d':
-        result = snow;
-        break;
-      case '13n':
-        result = snow;
-        break;
       case '50d':
         result = brokenCloudsD;
         break;

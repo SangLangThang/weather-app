@@ -1,5 +1,5 @@
 <div class="weather-hours-item">
-  <p class="weather-hours-item-time">{{ hour.time }}</p>
-  <img [src]="hour.icon" alt="" class="weather-hours-item-icon" />
-  <p class="weather-hours-item-temp">{{ hour.temp }}°</p>
+  <p class="weather-hours-item-time">{{ hour.time|date:'h:mm a' }}</p>
+  <img [src]="hour.icon | icon2d" alt="" class="weather-hours-item-icon" />
+  <p class="weather-hours-item-temp">{{ hour.temp |temp }}°</p>
 </div>

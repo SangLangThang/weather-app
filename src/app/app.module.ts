@@ -8,6 +8,7 @@ import {
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import * as Hammer from 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,13 @@ import { Icon3dPipe } from './pipes/icon3d.pipe';
 import { FilterSearchPipe } from './pipes/filter-search.pipe';
 import { WeatherTodayComponent } from './components/weather-today/weather-today.component';
 import { WeatherHourComponent } from './components/weather-hour/weather-hour.component';
+import { Icon2dPipe } from './pipes/icon2d.pipe';
 
+export class HammerConfig extends HammerGestureConfig {
+ /*  overrides = {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  }; */
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +38,7 @@ import { WeatherHourComponent } from './components/weather-hour/weather-hour.com
     FilterSearchPipe,
     WeatherTodayComponent,
     WeatherHourComponent,
+    Icon2dPipe,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,10 @@ import { WeatherHourComponent } from './components/weather-hour/weather-hour.com
     FormsModule,
     HammerModule,
   ],
-  providers: [],
+  providers: [{ 
+    provide: HAMMER_GESTURE_CONFIG, 
+    useClass: HammerConfig 
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

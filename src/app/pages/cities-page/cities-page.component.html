@@ -3,28 +3,36 @@
     <div class="cities__search">
       <label class="cities__search-label"> Find Location </label>
       <div type="text" class="cities__search-input">
-        <input type="text" placeholder="Search for your location..." [(ngModel)]="searchCity"
+        <input
+          type="text"
+          placeholder="Search for your location..."
+          [(ngModel)]="searchCity"
         />
         <i class="bx bx-search"></i>
       </div>
     </div>
     <div class="cities__lists">
-      <app-city-box *ngFor="let city of cities |filterSearch:searchCity" [city]="city"></app-city-box>
+      <app-city-box
+        *ngFor="let city of cities | filterSearch: searchCity"
+        [city]="city"
+        (click)="detailCity(city)"
+      ></app-city-box>
     </div>
 
     <div class="cities__action">
       <div class="action-search">
         <label class="action-label"> Add City </label>
-        <p class="action-error" *ngIf="errorMessage.length>0">{{errorMessage}}</p>
+        <p class="action-error" *ngIf="errorMessage.length > 0">
+          {{ errorMessage }}
+        </p>
         <div type="text" class="action-input">
           <input
             type="text"
             placeholder="Input location..."
             class="form-control"
             [formControl]="addCityControl"
-            
           />
-          
+
           <i class="bx bx-plus"></i>
         </div>
       </div>

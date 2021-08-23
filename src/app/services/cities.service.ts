@@ -24,7 +24,7 @@ export class CitiesService {
     }
     return result;
   }
-
+  arrayColor = this.getRandomColor();
   createCityInfo(city: any, index: number, arrColor: string[]) {
     return {
       id: index,
