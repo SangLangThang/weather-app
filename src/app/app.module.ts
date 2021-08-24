@@ -21,6 +21,11 @@ import { FilterSearchPipe } from './pipes/filter-search.pipe';
 import { WeatherTodayComponent } from './components/weather-today/weather-today.component';
 import { WeatherHourComponent } from './components/weather-hour/weather-hour.component';
 import { Icon2dPipe } from './pipes/icon2d.pipe';
+import { WeatherWeekComponent } from './components/weather-week/weather-week.component';
+import { WeatherComfortComponent } from './components/weather-comfort/weather-comfort.component';
+import { WeatherSunComponent } from './components/weather-sun/weather-sun.component';
+import { WeatherWindComponent } from './components/weather-wind/weather-wind.component';
+import { WeatherCircleComponent } from './components/weather-circle/weather-circle.component';
 
 export class HammerConfig extends HammerGestureConfig {
  /*  overrides = {
@@ -39,6 +44,11 @@ export class HammerConfig extends HammerGestureConfig {
     WeatherTodayComponent,
     WeatherHourComponent,
     Icon2dPipe,
+    WeatherWeekComponent,
+    WeatherComfortComponent,
+    WeatherSunComponent,
+    WeatherWindComponent,
+    WeatherCircleComponent,
   ],
   imports: [
     BrowserModule,

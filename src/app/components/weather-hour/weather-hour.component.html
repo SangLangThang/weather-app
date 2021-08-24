@@ -1,5 +1,11 @@
-<div class="weather-hours-item">
-  <p class="weather-hours-item-time">{{ hour.time|date:'h:mm a' }}</p>
-  <img [src]="hour.icon | icon2d" alt="" class="weather-hours-item-icon" />
-  <p class="weather-hours-item-temp">{{ hour.temp |temp }}°</p>
+<div class="weather-hours-item" [class]="hour.bgColor">
+  <p class="weather-hours-item-time">{{ hour.time | date: "h:mm" }}</p>
+  <div *ngIf="hour.current"> 
+    <img [src]="hour.icon | icon3d" alt="" class="weather-hours-item-icon"  />
+  </div>
+  <div *ngIf="!hour.current">
+    <img [src]="hour.icon | icon2d" alt="" class="weather-hours-item-icon" />
+  </div>
+
+  <p class="weather-hours-item-temp">{{ hour.temp | temp }}°</p>
 </div>

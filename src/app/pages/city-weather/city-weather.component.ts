@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-city-weather',
   templateUrl: './city-weather.component.html',
-  styleUrls: ['./city-weather.component.scss']
+  styleUrls: ['./city-weather.component.scss'],
 })
 export class CityWeatherComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
   
-  ngOnInit(): void {
-  }
-
+  
+  ngOnInit(): void {}
+  
 }

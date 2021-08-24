@@ -1,0 +1,50 @@
+<div class="weather-circle box">
+  <svg
+    [attr.width]="circle.width"
+    [attr.height]="circle.height"
+    class="weather-circle-svg"
+    [style]="classRotate"
+  >
+    <defs>
+      <linearGradient
+        #linear_gradient
+        [id]="circle.name||''"
+        gradientTransform="rotate(-5)"
+      >
+        <stop offset="0%" [attr.stop-color]="circle.gradient1" />
+        <stop offset="100%" [attr.stop-color]="circle.gradient2" />
+      </linearGradient>
+    </defs>
+    <circle
+      [attr.cx]="circle.width / 2"
+      [attr.cy]="circle.height / 2"
+      [attr.r]="circle.r"
+      [attr.stroke-width]="circle.stroke_width"
+      [attr.stroke]="circle.stroke_color_path"
+      class="weather-circle-path"
+      #circle_path
+    ></circle>
+
+    <circle
+      [attr.cx]="circle.width / 2"
+      [attr.cy]="circle.height / 2"
+      [attr.r]="circle.r"
+      [attr.stroke-width]="circle.stroke_width"
+      [attr.stroke]="gradient"
+      class="weather-circle-fill"
+      #circle_fill
+    ></circle>
+
+    <circle
+      *ngIf="circle.dash"
+      [attr.cx]="circle.width / 2"
+      [attr.cy]="circle.height / 2"
+      [attr.r]="circle.r"
+      [attr.stroke-dasharray]="circle.stroke_dash"
+      [attr.stroke-width]="circle.stroke_width"
+      [attr.stroke]="circle.stroke_color_dash"
+      class="weather-circle-dash"
+      #circle_dash
+    ></circle>
+  </svg>
+</div>

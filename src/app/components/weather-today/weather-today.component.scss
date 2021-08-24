@@ -1,6 +1,8 @@
 .weather-hours {
     width: 100%;
     padding-left: 20px;
+    max-width: 375px;
+    overflow: hidden;
     &-text {
       margin-bottom: 30px;
     }

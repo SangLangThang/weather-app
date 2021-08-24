@@ -7,9 +7,9 @@ import { WeatherHour } from 'src/app/app.model';
 })
 export class WeatherHourComponent implements OnInit {
   @Input() hour!: WeatherHour;
+  
   constructor() {}
 
   ngOnInit(): void {
-
   }
 }

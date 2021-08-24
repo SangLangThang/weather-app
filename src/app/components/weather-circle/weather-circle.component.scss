@@ -1,0 +1,28 @@
+.weather-circle {
+  
+  &-svg {
+  }
+  &-dash {
+    fill: none;
+    stroke-linecap: round;
+  }
+  &-path {
+    --initialStroke: 0;
+    --transitionDuration: 0;
+    stroke-dasharray: var(--initialStroke);
+    stroke-dashoffset: var(--initialStroke);
+    transition: all 1s ease;
+
+    fill: none;
+    stroke-linecap: round;
+  }
+  &-fill {
+    --initialStroke: 0;
+    --transitionDuration: 0;
+    stroke-dasharray: var(--initialStroke);
+    stroke-dashoffset: var(--initialStroke);
+    transition: all 1s ease;
+    fill: none;
+    stroke-linecap: round;
+  }
+}

@@ -34,16 +34,19 @@ export class CitiesPageComponent implements OnInit {
   detailCity(city: CityBoxData) {
     this.cityService.getDetailWeather(city).subscribe((doc) => {
       let data: WeatherHour[] = [];
+
       for (let i = 0; i < 24; i++) {
         data.push({
-          time: doc.hourly[i].dt*1000,
+          time: doc.hourly[i].dt * 1000,
           temp: doc.hourly[i].temp,
           icon: doc.hourly[i].weather[0].icon,
+          current: i === 0 ? true : false,
+          bgColor: i === 0 ? `current ${city.bgColor}` : '',
         });
       }
-      this.cityService.updateHours(data)
-      
-      this.router.navigateByUrl('/test')
+      this.cityService.updateHours(data);
+
+      this.router.navigateByUrl('/test');
     });
   }
   addCity() {

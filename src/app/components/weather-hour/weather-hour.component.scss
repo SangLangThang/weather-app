@@ -22,3 +22,14 @@
     }
   }
 }
+.weather-hours-item.current {
+  .weather-hours-item {
+    &-time,
+    &-temp {
+      color: white;
+    }
+  }
+  &.color-1,&.color-2,&.color-3{
+    box-shadow: none;
+  }
+}

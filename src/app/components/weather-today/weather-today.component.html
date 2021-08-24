@@ -1,12 +1,18 @@
-
 <a routerLink="/">Home</a>
 <a routerLink="/test">Test</a>
 <div class="weather-hours">
-    <p class="weather-hours-text">Today </p>
-    <div class="carousel">
-      <div class="weather-hours-lists" (swipeleft)="onSwipe($event) " #test
-      (swiperight)="onSwipe($event)">
-        <app-weather-hour *ngFor="let hour of hours" [hour]="hour"></app-weather-hour>
-      </div>
+  <p class="weather-hours-text">Today</p>
+  <div class="carousel">
+    <div
+      class="weather-hours-lists"
+      (swipeleft)="onSwipe($event)"
+      #test
+      (swiperight)="onSwipe($event)"
+    >
+      <app-weather-hour
+        *ngFor="let hour of hours"
+        [hour]="hour"
+      ></app-weather-hour>
     </div>
   </div>
+</div>

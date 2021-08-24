@@ -32,3 +32,7 @@ export const ic_thunderstorm_d="../assets/img/icon2d-weather/ic_thunderstorm_d.p
 export const ic_thunderstorm_n="../assets/img/icon2d-weather/ic_thunderstorm_n.png";
 export const ic_wind="../assets/img/icon2d-weather/ic_wind.png";
 export const ic_mist="../assets/img/icon2d-weather/ic_mist.png";
+export const sunrise="../assets/img/icon2d-weather/sunrise.png";
+export const sunset="../assets/img/icon2d-weather/sunset.png";
+export const Sun="../assets/img/icon2d-weather/Sun.png";
+export const WIND="../assets/img/icon2d-weather/WIND.svg";

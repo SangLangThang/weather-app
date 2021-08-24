@@ -1,0 +1,29 @@
+.wind {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  &-text {
+    margin-bottom: 30px;
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  &-status {
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-name {
+        color: var(--gray-color);
+        margin-right: 5px;
+      }
+    }
+    &-devide {
+      width: 1px;
+      height: 23px;
+      background-color: var(--gray-color);
+      margin: 0 20px;
+    }
+  }
+}

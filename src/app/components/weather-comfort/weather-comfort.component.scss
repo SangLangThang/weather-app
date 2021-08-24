@@ -1,0 +1,39 @@
+.comfort {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  &-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &-circle {
+    position: relative;
+  }
+  &-percent {
+    &-info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+  &-status {
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-name {
+        color: var(--gray-color);
+        margin-right: 5px;
+      }
+    }
+    &-devide {
+      width: 1px;
+      height: 23px;
+      background-color: var(--gray-color);
+      margin: 0 20px;
+    }
+  }
+}

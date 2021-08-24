@@ -1,0 +1,30 @@
+<div class="sun">
+    <p class="sun-text">Sunrise and sunset</p>
+
+    <div class="sun-box">
+      <!-- sunrise -->
+      <div class="sunrise">
+        <div class="sunrise-circle">
+            <app-weather-circle [circle]="circle_sunrise"></app-weather-circle>
+        </div>
+        <img [src]="sunrise" alt="" class="sunrise-icon" />
+      </div>
+      <!-- sun time -->
+      <div class="sun-time">
+        <span class="sun-time-start">06:10</span>
+        <div class="sun-time-line"></div>
+        <span class="sun-time-end">18:45</span>
+      </div>
+
+      <!-- sun set -->
+      <div class="sunset">
+        <div class="sunset-circle">
+          <app-weather-circle [circle]="circle_sunset"></app-weather-circle>
+        </div>
+        <img [src]="sunset" alt="" class="sunset-icon" />
+        <div class="sunset-sun">
+          <img [src]="Sun" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
