@@ -46,6 +46,7 @@
     bottom: 10px;
     left: 0;
     width: 100%;
+    background-color: #fff;
   }
 }
 .action {
@@ -68,6 +69,7 @@
     justify-content: space-between;
     align-items: center;
     & input {
+      width: 100%;
       padding: 14px 10px;
       background-color: transparent;
       &::placeholder {
@@ -124,8 +126,7 @@
 }
 .cities.addCity {
   .cities__action {
-    position:initial;
-    margin-bottom: 200px;
+    bottom: 10%;
   }
   .action {
     &-search {

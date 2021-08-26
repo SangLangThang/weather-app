@@ -26,6 +26,12 @@ import { WeatherComfortComponent } from './components/weather-comfort/weather-co
 import { WeatherSunComponent } from './components/weather-sun/weather-sun.component';
 import { WeatherWindComponent } from './components/weather-wind/weather-wind.component';
 import { WeatherCircleComponent } from './components/weather-circle/weather-circle.component';
+import { WeatherCurrentComponent } from './components/weather-current/weather-current.component';
+import { SvgWaterComponent } from './svg/svg-water/svg-water.component';
+import { SvgWindComponent } from './svg/svg-wind/svg-wind.component';
+import { SvgSkyComponent } from './svg/svg-sky/svg-sky.component';
+import { SvgTreeComponent } from './svg/svg-tree/svg-tree.component';
+import { WindDirectionPipe } from './pipes/wind-direction.pipe';
 
 export class HammerConfig extends HammerGestureConfig {
  /*  overrides = {
@@ -49,6 +55,12 @@ export class HammerConfig extends HammerGestureConfig {
     WeatherSunComponent,
     WeatherWindComponent,
     WeatherCircleComponent,
+    WeatherCurrentComponent,
+    SvgWaterComponent,
+    SvgWindComponent,
+    SvgSkyComponent,
+    SvgTreeComponent,
+    WindDirectionPipe,
   ],
   imports: [
     BrowserModule,

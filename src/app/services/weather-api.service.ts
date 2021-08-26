@@ -12,16 +12,17 @@ export class WeatherApiService {
   constructor(private httpClient: HttpClient) {}
 
   getCityByName(city: string): Observable<any> {
+    console.log("getCityByName")
     return this.httpClient.get(`${this.API_URL}`, {
       params: new HttpParams({ fromString: `q=${city}&appid=${this.API_KEY}` }),
     });
   }
-  getCityWeather(lat: number, lon: number, config: string): Observable<any> {
-    let excludeDefault=['current','minutely','hourly','daily','alerts']
-    let exclude=excludeDefault.filter(e=>e!=config).toLocaleString()
+  getCityWeather(lat: number, lon: number): Observable<any> {
+    /* let excludeDefault=['current','minutely','hourly','daily','alerts'] */
+    let option=['minutely','alerts'].toLocaleString()
     return this.httpClient.get(`${this.API_ONECALL_URL}`, {
       params: new HttpParams({
-        fromString: `lat=${lat}&lon=${lon}&exclude=${exclude}&appid=${this.API_KEY}`,
+        fromString: `lat=${lat}&lon=${lon}&exclude=${option}&appid=${this.API_KEY}`,
       }),
     });
   }

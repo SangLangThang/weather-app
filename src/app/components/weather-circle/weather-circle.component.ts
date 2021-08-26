@@ -41,6 +41,7 @@ export class WeatherCircleComponent implements OnInit {
         : this.circle.stroke_color_fill;
   }
   ngAfterViewInit() {
-    this.offsetData(this.circle_fill, this.circle.offset, 70);
+    this.offsetData(this.circle_fill, this.circle.offset, this.circle.percent);
+    this.offsetData(this.circle_path, this.circle.offset, 100);
   }
 }

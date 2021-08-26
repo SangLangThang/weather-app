@@ -1,17 +1,17 @@
 <div class="wind">
   <p class="wind-text">Wind</p>
   <div class="wind-icon">
-    <img [src]="WIND" alt="" />
+    <app-svg-tree></app-svg-tree>
   </div>
   <div class="wind-status flex-center">
     <div class="wind-status-item">
-      <span class="wind-status-item-name fz-small">Feels Like</span>
-      <span class="fz-small">10°</span>
+      <span class="wind-status-item-name fz-small">Direction</span>
+      <span class="fz-small">{{direction|windDirection}}</span>
     </div>
     <div class="wind-status-devide"></div>
     <div class="wind-status-item">
-      <span class="wind-status-item-name fz-small">UV Index</span>
-      <span class="fz-small">10°</span>
+      <span class="wind-status-item-name fz-small">Speed</span>
+      <span class="fz-small">{{speed}}km/h</span>
     </div>
   </div>
 </div>

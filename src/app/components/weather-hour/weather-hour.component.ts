@@ -9,7 +9,6 @@ export class WeatherHourComponent implements OnInit {
   @Input() hour!: WeatherHour;
   
   constructor() {}
-
   ngOnInit(): void {
   }
 }

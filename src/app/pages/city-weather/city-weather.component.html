@@ -1,6 +1,36 @@
 <div class="container">
-  <app-weather-week></app-weather-week>
-  <app-weather-comfort></app-weather-comfort>
-  <app-weather-sun></app-weather-sun>
-  <app-weather-wind></app-weather-wind>
+  <div class="box-blank" [class.show1]="showPageAction"></div>
+  <div class="box-btn" [class.show3]="showPageAction">
+    <a routerLink="/" class="box-btn-link"
+      ><i class="bx bx-plus"></i>
+      <span>Add City</span>
+    </a>
+    <a href="#" class="box-btn-link"
+      ><i class="bx bx-cog"></i>
+      <span>Setting</span>
+    </a>
+    <a href="#" class="box-btn-link"
+      ><i class="bx bx-map"></i>
+      <span>Map</span>
+    </a>
+  </div>
+  <div class="box" [class.show]="showPageAction">
+    <app-weather-current (toggle)="toggleAction()" [current]="data.current"
+    [name]="data.name"
+    ></app-weather-current>
+    <app-weather-week [week]="data.daily"></app-weather-week>
+    <app-weather-comfort
+      [uvi]="data.current.uvi"
+      [feels_like]="data.current.feels_like"
+      [humidity]="data.current.humidity"
+    ></app-weather-comfort>
+    <app-weather-sun
+      [sunrise_time]="data.current.sunrise"
+      [sunset_time]="data.current.sunset"
+    ></app-weather-sun>
+    <app-weather-wind
+      [direction]="data.current.direction"
+      [speed]="data.current.wind_speed"
+    ></app-weather-wind>
+  </div>
 </div>

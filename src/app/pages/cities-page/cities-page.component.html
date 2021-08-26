@@ -15,7 +15,8 @@
       <app-city-box
         *ngFor="let city of cities | filterSearch: searchCity"
         [city]="city"
-        (click)="detailCity(city)"
+        [routerLink]="['detail',city.id]"
+        
       ></app-city-box>
     </div>
 

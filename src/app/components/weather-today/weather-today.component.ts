@@ -28,7 +28,7 @@ export class WeatherTodayComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.hours=this.cityService.getData()
+    
   }
   ngAfterViewInit() {
     

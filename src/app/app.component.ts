@@ -5,8 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  timestamp=1629568800*1000;
-  /* {{timestamp | date:'EEEE, MMMM d'}} */
+  
   constructor() {
     
   }

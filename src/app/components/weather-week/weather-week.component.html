@@ -1,1 +1,18 @@
-<p>weather-week works!</p>
+<div class="weather-week">
+  <div class="weather-week-text">Next Days</div>
+  <!-- weather-week-item -->
+  <div class="weather-week-lists">
+    <div class="weather-week-item" *ngFor="let day of week">
+      <p class="weather-week-item-time">
+        {{ day.time * 1000 | date: "EEEE, MMMM d" }}
+      </p>
+      <div class="weather-week-item-icon">
+        <img [src]="day.icon | icon2d" alt="" />
+      </div>
+
+      <p class="weather-week-item-temp">
+        {{ day.tempMax | temp }}°/{{ day.tempMin | temp }}°
+      </p>
+    </div>
+  </div>
+</div>

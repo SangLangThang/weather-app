@@ -11,9 +11,9 @@
       </div>
       <!-- sun time -->
       <div class="sun-time">
-        <span class="sun-time-start">06:10</span>
+        <span class="sun-time-start">{{sunrise_time |date:'h:mm'}}</span>
         <div class="sun-time-line"></div>
-        <span class="sun-time-end">18:45</span>
+        <span class="sun-time-end">{{sunset_time |date:'h:mm'}}</span>
       </div>
 
       <!-- sun set -->

@@ -36,3 +36,4 @@ export const sunrise="../assets/img/icon2d-weather/sunrise.png";
 export const sunset="../assets/img/icon2d-weather/sunset.png";
 export const Sun="../assets/img/icon2d-weather/Sun.png";
 export const WIND="../assets/img/icon2d-weather/WIND.svg";
+export const ic_water="../assets/img/icon2d-weather/ic_water.png";
