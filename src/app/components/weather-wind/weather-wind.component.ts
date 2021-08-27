@@ -5,9 +5,8 @@ import { Component, OnInit ,Input} from '@angular/core';
   styleUrls: ['./weather-wind.component.scss'],
 })
 export class WeatherWindComponent implements OnInit {
-  @Input()direction!:number;
-  @Input()speed!:number;
-
+  @Input()wind!:any;
+  @Input()color!:string
   constructor() {}
 
   ngOnInit(): void {

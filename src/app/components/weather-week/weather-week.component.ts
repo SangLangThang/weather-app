@@ -9,7 +9,7 @@ import { DailyDetail } from 'src/app/app.model';
 export class WeatherWeekComponent implements OnInit {
   constructor() {}
   @Input()week: DailyDetail[] = [];
+  @Input()color!:string
   ngOnInit(): void {
-    console.log(this.week)
   }
 }

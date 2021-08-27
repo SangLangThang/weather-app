@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { CityService } from 'src/app/services/city.service';
 import { CitiesService } from '../../services/cities.service';
-import { WeatherApiService } from '../../services/weather-api.service';
 import { CityBoxData } from './../../app.model';
 @Component({
   selector: 'app-cities-page',
@@ -14,11 +11,8 @@ import { CityBoxData } from './../../app.model';
 })
 export class CitiesPageComponent implements OnInit {
   constructor(
-    private weatherApiService: WeatherApiService,
     private citiesService: CitiesService,
-    private cityService: CityService,
-    private router: Router,
-    private route: ActivatedRoute,
+    
   ) {}
   submitted: boolean = false;
   cities: CityBoxData[] = [];

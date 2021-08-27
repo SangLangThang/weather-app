@@ -37,3 +37,6 @@ export const sunset="../assets/img/icon2d-weather/sunset.png";
 export const Sun="../assets/img/icon2d-weather/Sun.png";
 export const WIND="../assets/img/icon2d-weather/WIND.svg";
 export const ic_water="../assets/img/icon2d-weather/ic_water.png";
+export const cloud="../assets/img/icon2d-weather/cloud.png";
+export const water_drop="../assets/img/icon2d-weather/water-drop.png";
+export const wind="../assets/img/icon2d-weather/wind.png";

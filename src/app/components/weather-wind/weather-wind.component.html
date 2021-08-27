@@ -6,12 +6,12 @@
   <div class="wind-status flex-center">
     <div class="wind-status-item">
       <span class="wind-status-item-name fz-small">Direction</span>
-      <span class="fz-small">{{direction|windDirection}}</span>
+      <span class="fz-small">{{wind.wind_deg|windDirection}}</span>
     </div>
     <div class="wind-status-devide"></div>
     <div class="wind-status-item">
       <span class="wind-status-item-name fz-small">Speed</span>
-      <span class="fz-small">{{speed}}km/h</span>
+      <span class="fz-small">{{wind.wind_speed}}m/s</span>
     </div>
   </div>
 </div>

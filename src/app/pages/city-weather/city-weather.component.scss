@@ -1,12 +1,14 @@
 .container {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 375px;
 }
 .box {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  transition: all 1s ease-in;
+  transition: all .5s ease-in;
   background-color: #fff;
   max-width: 375px;
   overflow: hidden;
@@ -19,7 +21,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  transition: all .7s ease-in;
+  transition: all .3s ease-in;
   z-index: -2;
   &-link {
     font-size: 18px;
@@ -35,7 +37,7 @@
   left: 0;
   background-color: white;
   z-index: -10;
-  transition: all 1s ease-in;
+  transition: all .5s ease-in;
   transform: rotate(0deg) translate(0px, 120px);
 }
 .show {

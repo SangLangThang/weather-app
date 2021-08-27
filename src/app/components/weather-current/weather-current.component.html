@@ -5,8 +5,8 @@
 <!-- box city name -->
 <div class="city">
   <p class="city-now">Today</p>
-  <p class="city-name">{{name}}</p>
-  <p class="city-time">{{current.time*1000 |date:'d/M/yy, h:mm a'}}</p>
+  <p class="city-name">{{current.name}}</p>
+  <p class="city-time">{{current.time*1000 |date:'d/M/yy'}}</p>
 </div>
 
 <div class="weather">
@@ -17,28 +17,28 @@
 
     <div class="current-divice"></div>
     <div class="current-info flex-center">
-      <span class="current-temp">{{current.temp |temp}}°</span>
+      <span class="current-temp">{{current.temp}}°</span>
       <span class="current-status">{{current.description |uppercase}}</span>
     </div>
   </div>
   <div class="weather-more">
     <div class="weather-more-item">
       <div class="weather-more-item-icon flex-center">
-        <app-svg-wind></app-svg-wind>
+        <img [src]="wind" alt="" class="current-img" />
       </div>
-      <p class="weather-more-item-text">{{current.wind_speed}}km/h</p>
+      <p class="weather-more-item-text">{{current.wind_speed}} m/s</p>
     </div>
     <div class="weather-more-item">
       <div class="weather-more-item-icon flex-center">
-        <app-svg-sky></app-svg-sky>
+        <img [src]="cloud" alt="" class="current-img" />
       </div>
       <p class="weather-more-item-text">{{current.clouds}}</p>
     </div>
     <div class="weather-more-item">
       <div class="weather-more-item-icon flex-center">
-        <app-svg-water></app-svg-water>
+        <img [src]="water_drop" alt="" class="current-img" />
       </div>
-      <p class="weather-more-item-text">{{current.humidity}}%</p>
+      <p class="weather-more-item-text">{{current.humidity}} %</p>
     </div>
   </div>
 </div>

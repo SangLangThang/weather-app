@@ -15,22 +15,23 @@
     </a>
   </div>
   <div class="box" [class.show]="showPageAction">
-    <app-weather-current (toggle)="toggleAction()" [current]="data.current"
-    [name]="data.name"
+    <app-weather-current
+      (toggle)="toggleAction()"
+      [current]="data.current.main"
     ></app-weather-current>
-    <app-weather-week [week]="data.daily"></app-weather-week>
-    <app-weather-comfort
-      [uvi]="data.current.uvi"
-      [feels_like]="data.current.feels_like"
-      [humidity]="data.current.humidity"
-    ></app-weather-comfort>
-    <app-weather-sun
-      [sunrise_time]="data.current.sunrise"
-      [sunset_time]="data.current.sunset"
-    ></app-weather-sun>
+    <app-weather-today
+      [hours]="data.hourly"
+      [color]="data.current.main.color"
+    ></app-weather-today>
+    <app-weather-week
+      [week]="data.daily"
+      [color]="data.current.main.color"
+    ></app-weather-week>
+    <app-weather-comfort [comfort]="data.current.comfort"></app-weather-comfort>
+    <app-weather-sun [sun]="data.current.sun"></app-weather-sun>
     <app-weather-wind
-      [direction]="data.current.direction"
-      [speed]="data.current.wind_speed"
+      [wind]="data.current.wind"
+      [color]="data.current.main.color"
     ></app-weather-wind>
   </div>
 </div>

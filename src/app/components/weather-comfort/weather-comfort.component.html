@@ -4,7 +4,7 @@
     <div class="comfort-circle flex-center">
       <app-weather-circle [circle]="circle1"></app-weather-circle>
       <div class="comfort-percent-info">
-        <p class="fz-medium">{{humidity}}%</p>
+        <p class="fz-medium">{{comfort.humidity}}%</p>
         <p class="fz-small">Humidity</p>
       </div>
     </div>
@@ -13,12 +13,12 @@
   <div class="comfort-status flex-center">
     <div class="comfort-status-item">
       <span class="comfort-status-item-name fz-small">Feels Like</span>
-      <span class="fz-small">{{feels_like |temp}}°</span>
+      <span class="fz-small">{{comfort.feels_like}}°</span>
     </div>
     <div class="comfort-status-devide"></div>
     <div class="comfort-status-item">
       <span class="comfort-status-item-name fz-small">UV Index</span>
-      <span class="fz-small">{{uvi}}</span>
+      <span class="fz-small">{{comfort.uvi}}</span>
     </div>
   </div>
 </div>

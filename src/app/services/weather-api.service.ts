@@ -22,7 +22,7 @@ export class WeatherApiService {
     let option=['minutely','alerts'].toLocaleString()
     return this.httpClient.get(`${this.API_ONECALL_URL}`, {
       params: new HttpParams({
-        fromString: `lat=${lat}&lon=${lon}&exclude=${option}&appid=${this.API_KEY}`,
+        fromString: `lat=${lat}&lon=${lon}&units=metric&exclude=${option}&appid=${this.API_KEY}`,
       }),
     });
   }

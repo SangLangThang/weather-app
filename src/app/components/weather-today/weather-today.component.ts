@@ -1,6 +1,6 @@
-import { WeatherHour } from './../../app.model';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CityService } from 'src/app/services/city.service';
+import { HourlyDetail } from './../../app.model';
 @Component({
   selector: 'app-weather-today',
   templateUrl: './weather-today.component.html',
@@ -12,7 +12,8 @@ export class WeatherTodayComponent implements OnInit {
   
   
 
-  hours: WeatherHour[] = [];
+  @Input()hours: HourlyDetail[] = [];
+  @Input()color!:string
   step = 88;
   position = 0;
 

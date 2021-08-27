@@ -6,8 +6,8 @@ import { WeatherHour } from 'src/app/app.model';
   styleUrls: ['./weather-hour.component.scss'],
 })
 export class WeatherHourComponent implements OnInit {
-  @Input() hour!: WeatherHour;
-  
+  @Input()hour: any
+  @Input() isFirst!:boolean
   constructor() {}
   ngOnInit(): void {
   }

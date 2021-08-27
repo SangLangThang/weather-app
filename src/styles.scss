@@ -1,91 +1,105 @@
 /* You can add global sty/*=============== GOOGLE FONTS ===============*/
 @font-face {
-    font-family: MohrRounded;
-    src: url(./assets/fonts/MohrRounded-Regular.ttf);
-    src:format('truetype')
-  }
-  :root {
-    /*========== Font and typography ==========*/
-    --body-font: "MohrRounded", sans-serif;
-  
-    --text-color: #171717;
-    --gray-color: #bdbce1;
-  
-    --gradient-1: linear-gradient(-44.13deg, #2ac9b3 0%, #29ff96 100%);
-    --gradient-2: linear-gradient(-41.37deg, #ca03df 0%, #ff7074 100%);
-    --gradient-3: linear-gradient(-44.13deg, #467bff 0%, #c661ff 100%);
-  
-    --boxshadow-1: 0px 12px 18px 0px rgba(42, 230, 164, 0.3);
-    --boxshadow-2: 0px 12px 18px 0px rgba(229, 58, 170, 0.3);
-    --boxshadow-3: 0px 12px 18px 0px rgba(131, 111, 255, 0.3);
+  font-family: MohrRounded;
+  src: url(./assets/fonts/MohrRounded-Regular.ttf);
+  src: format("truetype");
+}
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: "MohrRounded", sans-serif;
 
-  }
-  
-  
-  .color-1{
-    background-image:var(--gradient-1);
-    box-shadow: var(--boxshadow-1);
-  }
-  .color-2{
-    background-image:var(--gradient-2);
-    box-shadow: var(--boxshadow-2);
-  }
-  .color-3{
-    background-image:var(--gradient-3);
-    box-shadow: var(--boxshadow-3);
-  }
-  .fz-medium{
-    font-size: 25px;
-  }
-  .fz-small{
-    font-size: 12px;
-  }
-  .flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /*=============== BASE ===============*/
+  --text-color: #171717;
+  --gray-color: #bdbce1;
+
+  --gradient-1: linear-gradient(-44.13deg, #2ac9b3 0%, #29ff96 100%);
+  --gradient-2: linear-gradient(-41.37deg, #ca03df 0%, #ff7074 100%);
+  --gradient-3: linear-gradient(-44.13deg, #467bff 0%, #c661ff 100%);
+
+  --boxshadow-1: 0px 12px 18px 0px rgba(42, 230, 164, 0.3);
+  --boxshadow-2: 0px 12px 18px 0px rgba(229, 58, 170, 0.3);
+  --boxshadow-3: 0px 12px 18px 0px rgba(131, 111, 255, 0.3);
+}
+
+.color-1 {
+  background-image: var(--gradient-1);
+  box-shadow: var(--boxshadow-1);
+}
+.color-2 {
+  background-image: var(--gradient-2);
+  box-shadow: var(--boxshadow-2);
+}
+.color-3 {
+  background-image: var(--gradient-3);
+  box-shadow: var(--boxshadow-3);
+}
+.fz-medium {
+  font-size: 25px;
+}
+.fz-small {
+  font-size: 12px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*=============== BASE ===============*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: var(--body-font);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    background-color: white;
-    color: var(--text-color);
-  }
-  
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  button,
-  input {
-    border: none;
-    outline: none;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .box{
-    width: 100%;
-    max-width: 375px;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: white;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+app-root {
+  box-shadow: var(--boxshadow-3);
+}
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(235, 232, 232);
+  border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color:  rgb(197, 190, 190);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+  width: 100%;
+  max-width: 375px;
+}

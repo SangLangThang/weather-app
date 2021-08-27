@@ -8,15 +8,13 @@ import { WeatherCircle } from 'src/app/app.model';
 })
 export class WeatherComfortComponent implements OnInit {
   constructor() {}
-  @Input() humidity!: number;
-  @Input() feels_like!: number;
-  @Input() uvi!: number;
-
+  @Input() comfort!:any
+  @Input()color!:string
 
 
 
   ngOnInit(): void {
-    this.circle1.percent=this.humidity
+    this.circle1.percent=this.comfort.humidity
   }
   circle1: WeatherCircle = {
     gradient1: '#467bff',

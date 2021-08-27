@@ -11,9 +11,10 @@
       </div>
       <!-- sun time -->
       <div class="sun-time">
-        <span class="sun-time-start">{{sunrise_time |date:'h:mm'}}</span>
+        <span class="sun-time-start">{{sun.sunrise_time*1000 |date:'h:mm a'}}</span>
+        
         <div class="sun-time-line"></div>
-        <span class="sun-time-end">{{sunset_time |date:'h:mm'}}</span>
+        <span class="sun-time-end">{{sun.sunset_time*1000 |date:'h:mm a'}}</span>
       </div>
 
       <!-- sun set -->
@@ -22,7 +23,7 @@
           <app-weather-circle [circle]="circle_sunset"></app-weather-circle>
         </div>
         <img [src]="sunset" alt="" class="sunset-icon" />
-        <div class="sunset-sun">
+        <div class="sunset-sun" [style]="classRotate">
           <img [src]="Sun" alt="" />
         </div>
       </div>
